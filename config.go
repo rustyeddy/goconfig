@@ -32,7 +32,7 @@ func (c Configuration) Read(fname string) error {
 
 func (c Configuration) Write(fname string) error {
 
-	jbuf, err := json.Marshal(&c)
+	jbuf, err := json.MarshalIndent(&c, "", "  ")
 	if err != nil {
 		return fmt.Errorf("Failed to encode file", fname, err)
 	}
@@ -46,7 +46,7 @@ func (c Configuration) Write(fname string) error {
 
 func (c Configuration) Dump() error {
 
-	jbuf, err := json.Marshal(&c)
+	jbuf, err := json.MarshalIndent(&c, "", "  ")
 	if err != nil {
 		return fmt.Errorf("Failed to encode file", err)
 	}

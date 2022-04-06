@@ -28,8 +28,7 @@ func main() {
 
 	if config.Filename != "" {
 		config.Write(config.Filename)
-	} else {
-		config.Dump()
 	}
+	config.Dump()
 }
 

@@ -1,1 +1,5 @@
-{"addr":":8080","broker":"localhost","verbose":true}
+{
+  "addr": "",
+  "broker": "tcp://localhost:1883",
+  "verbose": false
+}
